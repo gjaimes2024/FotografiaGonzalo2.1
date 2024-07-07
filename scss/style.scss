@@ -16,8 +16,7 @@
     }
 
     .lista {
-        list-style: none;
-        text-decoration: none;
+        
         text-align: center;
         color: black;
         display: flex;
@@ -25,11 +24,12 @@
         padding: 50px;
         margin: 50px;
         box-sizing: border-box;
-        justify-content: center; 
+        justify-content: center;
     }
 
     .enlace-animales .animales {
         background-color: $color-primario;
+        font-family: $fuente-principal;
         font-size: $tamano-titulo-secundario;
     }
 
@@ -53,6 +53,7 @@
 
     .titulo-animales {
         background-color: $color-primario; //fondo del titulo pagina animales
+        background-image: linear-gradient(to left, $color-primario, green);
     }
 
     .titulo-nocturno {
@@ -67,13 +68,17 @@
         background-color: $color-cuarto;
     }
 
-    ul li a {
-        text-decoration: none; /* Elimina el subrayado */
+    ul{
+        list-style: none;
+        text-decoration: none;
+    }
+     li a {
         color: black; /* Hereda el color del padre (li) */
         display: flex;
-        flex-direction: row;    
+        flex-direction: row;
         list-style: none;
         margin: 20px;
+    
     }
 
     .enlace-index {
@@ -128,7 +133,7 @@
         padding: 5px;
     }
 
-   
+
 
     // IMAGENES PAISAJE
     .imagenes-paisaje img {
@@ -154,7 +159,7 @@
         width: 100%; /* Ancho completo del contenedor */
         height: auto; /* Altura automática para mantener la relación de aspecto */
     }
-        
+
 // GRID PAISAJES
 .imagenes-paisaje {
     display: grid;
@@ -206,4 +211,21 @@
     border: 1px solid black;
     padding: 5px;
     background-color: #f0f0f0;
+}
+
+
+/* Media Query para pantallas con ancho máximo de 600px */
+@media (max-width: 600px) {
+    /* Estilos aplicados solo cuando el ancho de la pantalla es 600px o menos */
+    p {
+        font-size: 14px; /* Cambia el tamaño de fuente para pantallas pequeñas */
+        background-color: red;
+    }
+}
+
+/* Media Query para pantallas pequeñas (máximo 768px) */
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 10px; /* Reducir el padding para dispositivos pequeños */
+    }
 }
