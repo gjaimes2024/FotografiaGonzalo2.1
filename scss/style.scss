@@ -51,6 +51,7 @@
         font-size: $tamano-titulo-secundario;
     }
 
+    //TITULOS DE LAS PAGINAS
     .titulo-animales {
         background-color: $color-primario; //fondo del titulo pagina animales
         background-image: linear-gradient(to left, $color-primario, green);
@@ -58,6 +59,8 @@
 
     .titulo-nocturno {
         background-color: $color-terciario;
+        background-image: linear-gradient(to left, $color-primario, green);
+
     }
 
     .titulo-paisajes {
