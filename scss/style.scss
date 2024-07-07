@@ -90,6 +90,9 @@
         border-radius: 10px;
         padding: 5px;
     }
+    .enlace-index:hover{
+        background-color: red;
+    }
 
     .enlace-nocturno {
         background-color: $color-terciario;
@@ -97,6 +100,11 @@
         border-radius: 10px;
         padding: 5px;
     }
+
+.enlace-nocturno:hover{
+    background-color: red;
+}
+
 
     .enlace-paisaje {
         background-color: $color-segundo;
