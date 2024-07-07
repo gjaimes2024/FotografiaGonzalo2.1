@@ -1,0 +1,209 @@
+
+    @use "colores.scss" as *;
+    @use "tipografias.scss" as *;
+    @use "imagenes.scss" as *;
+
+    body {
+        background-color: #F0F0F0; /* Color de fondo gris claro */
+    }
+
+    h1 {
+        background-color: rgb(53, 53, 196);
+        display: flex;
+        justify-content: center;
+        padding: 100px;
+        font-weight: bolder;
+    }
+
+    .lista {
+        list-style: none;
+        text-decoration: none;
+        text-align: center;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        margin: 50px;
+        box-sizing: border-box;
+        justify-content: center; 
+    }
+
+    .enlace-animales .animales {
+        background-color: $color-primario;
+        font-size: $tamano-titulo-secundario;
+    }
+
+    .enlace-nocturna .nocturna {
+        background-color: $color-segundo;
+        font-family: $fuente-principal;
+        font-size: $tamano-titulo-secundario;
+    }
+
+    .enlace-paisajes .paisajes {
+        background-color: $color-terciario;
+        font-family: $fuente-principal;
+        font-size: $tamano-titulo-secundario;
+    }
+
+    .enlace-sobre-mi .sobre-mi {
+        background-color: $color-cuarto;
+        font-family: $fuente-principal;
+        font-size: $tamano-titulo-secundario;
+    }
+
+    .titulo-animales {
+        background-color: $color-primario; //fondo del titulo pagina animales
+    }
+
+    .titulo-nocturno {
+        background-color: $color-terciario;
+    }
+
+    .titulo-paisajes {
+        background-color: $color-segundo;
+    }
+
+    .titulo-sobre-mi {
+        background-color: $color-cuarto;
+    }
+
+    ul li a {
+        text-decoration: none; /* Elimina el subrayado */
+        color: black; /* Hereda el color del padre (li) */
+        display: flex;
+        flex-direction: row;    
+        list-style: none;
+        margin: 20px;
+    }
+
+    .enlace-index {
+        background-color: rgb(53, 53, 196);
+        font-size: $tamano-nav;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .enlace-nocturno {
+        background-color: $color-terciario;
+        font-size: $tamano-nav;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .enlace-paisaje {
+        background-color: $color-segundo;
+        font-size: $tamano-nav;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .enlace-sobre-mi {
+        background-color: $color-cuarto;
+        font-size: $tamano-nav;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .enlace-animales {
+        background-color: $color-primario;
+        font-size: $tamano-nav;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    p {
+        font-size: $tamano-parrafo;
+        text-align: $alineacion-parrafo;
+        padding-right: 10px;
+        margin: 50px;
+    }
+
+    // IMAGENES ANIMALES
+    .imagenes-animales img {
+        width: 550px;
+        height: auto; /* Altura deseada para las imágenes */
+        margin: 80px;
+        border: solid black;
+        background-color: #f0f0f0;
+        padding: 5px;
+    }
+
+   
+
+    // IMAGENES PAISAJE
+    .imagenes-paisaje img {
+        width: 550px;
+        height: auto; /* Altura deseada para las imágenes */
+        margin: 80px;
+        border: solid black;
+        background-color: #f0f0f0;
+        padding: 5px;
+    }
+
+    // IMAGEN SOBRE MI
+    .imagen-sobre-mi img {
+        width: 550px;
+        height: auto; /* Altura deseada para las imágenes */
+        margin: 80px;
+        border: solid black;
+        background-color: #f0f0f0;
+        padding: 5px;
+    }
+    .imagenes img {
+        object-fit: cover; /* Ajustar para cubrir el contenedor */
+        width: 100%; /* Ancho completo del contenedor */
+        height: auto; /* Altura automática para mantener la relación de aspecto */
+    }
+        
+// GRID PAISAJES
+.imagenes-paisaje {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    width: 100%;
+    margin: auto;
+}
+
+.imagen-paisaje-7 { grid-column: 1 / 2; grid-row: 1 / 2; }
+.imagen-paisaje-8 { grid-column: 2 / 3; grid-row: 1 / 2; }
+.imagen-paisaje-9 { grid-column: 2 / 3; grid-row: 2 / 3; }
+.imagen-paisaje-1 { grid-column: 1 / 2; grid-row: 2 / 3; }
+.imagen-paisaje-4 { grid-column: 3 / 4; grid-row: 2 / 3; }
+.imagen-paisaje-11 { grid-column: 1 / 2; grid-row: 3 / 4; }
+.imagen-cielo-6 { grid-column: 3 / 4; grid-row: 3 / 4; }
+.imagen-paisaje-6 { grid-column: 2 / 3; grid-row: 4 / 5; }
+
+.imagenes-paisaje img {
+    width: 100%;
+    height: auto;
+    border: solid black;
+    background-color: #f0f0f0;
+    padding: 5px;
+}
+
+//GRID NOCTURNO
+.imagenes-nocturno {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.imagen-nocturno-11 { grid-area: 1 / 2 / 2 / 3; }
+.imagen-nocturno-3  { grid-area: 1/ 1 / 2 / 2; }
+.imagen-nocturno-6  { grid-area: 2 / 2 / 3 / 3; }
+.imagen-nocturno-19 { grid-area: 2 / 3 / 3 / 4; }
+.imagen-nocturno-9  { grid-area: 3 / 2 / 4 / 3; }
+.imagen-nocturno-10 { grid-area: 4 / 2 / 5 / 3; }
+.imagen-nocturno-8  { grid-area: 5 / 2 / 6 / 3; }
+
+.imagenes-nocturno img {
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: #f0f0f0;
+}
