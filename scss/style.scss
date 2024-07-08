@@ -2,7 +2,7 @@
     @use "colores.scss" as *;
     @use "tipografias.scss" as *;
     @use "imagenes.scss" as *;
-
+    
     body {
         background-color: #F0F0F0; /* Color de fondo gris claro */
     }
@@ -56,11 +56,14 @@
     .titulo-animales {
         // background-color: $color-primario; //fondo del titulo pagina animales
         background-image: linear-gradient(to left, red, green);
+    
+        
     }
 
     .titulo-nocturno {
         // background-color: $color-terciario;
         background-image: linear-gradient(to left, red, green);
+        animation-name: ;
     }
 
     .titulo-paisajes {
@@ -237,7 +240,22 @@
 
 /* Media Query para pantallas pequeñas (máximo 768px) */
 @media (max-width: 768px) {
-    .contenedor {
-        padding: 10px; /* Reducir el padding para dispositivos pequeños */
-    }
+    .imagenes-animales {
+        text-align: center;
+     }
+    .imagenes-paisaje{
+        text-align: center;
+
+     }
+}
+/* Media Query para pantallas pequeñas (máximo 480px) */
+
+@media(max-width:480px){
+    .imagenes-animales {
+        text-align: center;
+     }
+    .imagenes-paisaje{
+        text-align: center;
+
+     }
 }
