@@ -229,28 +229,24 @@
 }
 
 
-/* Media Query para pantallas con ancho máximo de 600px */
-@media (max-width: 600px) {
-    /* Estilos aplicados solo cuando el ancho de la pantalla es 600px o menos */
-    p {
-        font-size: 14px; /* Cambia el tamaño de fuente para pantallas pequeñas */
-        background-color: red;
-    }
-}
+
 
 /* Media Query para pantallas pequeñas (máximo 768px) */
 @media (max-width: 768px) {
     .imagenes-animales {
         text-align: center;
-        padding: 50px;
+        padding: 5px;
      }
     .imagenes-paisaje{
         text-align: center;
-        padding: 50px;
+        padding: 5px;
+        grid-template-columns: 1fr;
 
     .imagenes-nocturno{
         text-align: center;
-        padding: 50px;
+        padding: 5px;
+        grid-template-columns: 1fr;
+
     }
 
 
@@ -261,16 +257,16 @@
 @media(max-width:480px){
     .imagenes-animales {
         text-align: center;
-        padding: 50px;
+        padding: 5px;
 
      }
     .imagenes-paisaje{
         text-align: center;
-        padding: 50px;
+        padding: 5px;
 
      }
      .imagenes-nocturno{
         text-align: center;
-        padding: 50px;
+        padding: 5px;
     }
 }
