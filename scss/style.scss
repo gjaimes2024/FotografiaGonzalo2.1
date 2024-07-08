@@ -53,22 +53,24 @@
 
     //TITULOS DE LAS PAGINAS
     .titulo-animales {
-        background-color: $color-primario; //fondo del titulo pagina animales
-        background-image: linear-gradient(to left, $color-primario, green);
+        // background-color: $color-primario; //fondo del titulo pagina animales
+        background-image: linear-gradient(to left, red, green);
     }
 
     .titulo-nocturno {
-        background-color: $color-terciario;
-        background-image: linear-gradient(to left, $color-primario, green);
-
+        // background-color: $color-terciario;
+        background-image: linear-gradient(to left, red, green);
     }
 
     .titulo-paisajes {
-        background-color: $color-segundo;
+        // background-color: $color-segundo;
+        background-image: linear-gradient(to left, red, green);
     }
 
     .titulo-sobre-mi {
-        background-color: $color-cuarto;
+        background-image: linear-gradient(to left, red, green);
+
+        // background-color: $color-cuarto;
     }
 
     ul{
@@ -90,9 +92,7 @@
         border-radius: 10px;
         padding: 5px;
     }
-    .enlace-index:hover{
-        background-color: red;
-    }
+   
 
     .enlace-nocturno {
         background-color: $color-terciario;
@@ -101,7 +101,7 @@
         padding: 5px;
     }
 
-.enlace-nocturno:hover{
+    .enlace-nocturno:hover{
     background-color: red;
 }
 
