@@ -63,7 +63,7 @@
     .titulo-nocturno {
         // background-color: $color-terciario;
         background-image: linear-gradient(to left, red, green);
-        animation-name: ;
+        
     }
 
     .titulo-paisajes {
@@ -242,9 +242,12 @@
 @media (max-width: 768px) {
     .imagenes-animales {
         text-align: center;
+        padding: 50px;
      }
     .imagenes-paisaje{
         text-align: center;
+        padding: 50px;
+
 
      }
 }
@@ -253,9 +256,12 @@
 @media(max-width:480px){
     .imagenes-animales {
         text-align: center;
+        padding: 50px;
+
      }
     .imagenes-paisaje{
         text-align: center;
+        padding: 50px;
 
      }
 }
