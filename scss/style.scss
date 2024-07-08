@@ -1,179 +1,165 @@
+@use "colores.scss" as *;
+@use "tipografias.scss" as *;
+@use "imagenes.scss" as *;
 
-    @use "colores.scss" as *;
-    @use "tipografias.scss" as *;
-    @use "imagenes.scss" as *;
-    
-    body {
-        background-color: #F0F0F0; /* Color de fondo gris claro */
-    }
+body {
+    background-color: #F0F0F0; /* Color de fondo gris claro */
+}
 
-    h1 {
-        background-image: linear-gradient(to left, red, green);
+h1 {
+    background-image: linear-gradient(to left, red, green);
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    font-weight: bolder;
+}
 
-        display: flex;
-        justify-content: center;
-        padding: 100px;
-        font-weight: bolder;
-    }
+.lista {
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin: 50px;
+    box-sizing: border-box;
+    justify-content: center;
+}
 
-    .lista {
-        
-        text-align: center;
-        color: black;
-        display: flex;
-        flex-direction: column;
-        padding: 50px;
-        margin: 50px;
-        box-sizing: border-box;
-        justify-content: center;
-    }
+.enlace-animales {
+    background-color: $color-primario;
+    font-family: $fuente-principal;
+    font-size: $tamano-titulo-secundario;
+}
 
-    .enlace-animales .animales {
-        background-color: $color-primario;
-        font-family: $fuente-principal;
-        font-size: $tamano-titulo-secundario;
-    }
+.enlace-nocturna {
+    background-color: $color-segundo;
+    font-family: $fuente-principal;
+    font-size: $tamano-titulo-secundario;
+}
 
-    .enlace-nocturna .nocturna {
-        background-color: $color-segundo;
-        font-family: $fuente-principal;
-        font-size: $tamano-titulo-secundario;
-    }
+.enlace-paisajes {
+    background-color: $color-terciario;
+    font-family: $fuente-principal;
+    font-size: $tamano-titulo-secundario;
+}
 
-    .enlace-paisajes .paisajes {
-        background-color: $color-terciario;
-        font-family: $fuente-principal;
-        font-size: $tamano-titulo-secundario;
-    }
+.enlace-sobre-mi {
+    background-color: $color-cuarto;
+    font-family: $fuente-principal;
+    font-size: $tamano-titulo-secundario;
+}
 
-    .enlace-sobre-mi .sobre-mi {
-        background-color: $color-cuarto;
-        font-family: $fuente-principal;
-        font-size: $tamano-titulo-secundario;
-    }
+//TITULOS DE LAS PAGINAS
+.titulo-animales {
+    background-image: linear-gradient(to left, red, green);
+}
 
-    //TITULOS DE LAS PAGINAS
-    .titulo-animales {
-        // background-color: $color-primario; //fondo del titulo pagina animales
-        background-image: linear-gradient(to left, red, green);
-    
-        
-    }
+.titulo-nocturno {
+    background-image: linear-gradient(to left, red, green);
+}
 
-    .titulo-nocturno {
-        // background-color: $color-terciario;
-        background-image: linear-gradient(to left, red, green);
-        
-    }
+.titulo-paisajes {
+    background-image: linear-gradient(to left, red, green);
+}
 
-    .titulo-paisajes {
-        // background-color: $color-segundo;
-        background-image: linear-gradient(to left, red, green);
-    }
+.titulo-sobre-mi {
+    background-image: linear-gradient(to left, red, green);
+}
 
-    .titulo-sobre-mi {
-        background-image: linear-gradient(to left, red, green);
+ul {
+    list-style: none;
+    text-decoration: none;
+}
 
-        // background-color: $color-cuarto;
-    }
+li a {
+    color: black; /* Hereda el color del padre (li) */
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 20px;
+}
 
-    ul{
-        list-style: none;
-        text-decoration: none;
-    }
-     li a {
-        color: black; /* Hereda el color del padre (li) */
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        margin: 20px;
-    
-    }
+.enlace-index {
+    background-color: rgb(53, 53, 196);
+    font-size: $tamano-nav;
+    border-radius: 10px;
+    padding: 5px;
+}
 
-    .enlace-index {
-        background-color: rgb(53, 53, 196);
-        font-size: $tamano-nav;
-        border-radius: 10px;
-        padding: 5px;
-    }
-   
+.enlace-nocturno {
+    background-color: $color-terciario;
+    font-size: $tamano-nav;
+    border-radius: 10px;
+    padding: 5px;
+}
 
-    .enlace-nocturno {
-        background-color: $color-terciario;
-        font-size: $tamano-nav;
-        border-radius: 10px;
-        padding: 5px;
-    }
-
-    .enlace-nocturno:hover{
+.enlace-nocturno:hover {
     background-color: red;
 }
 
+.enlace-paisaje {
+    background-color: $color-segundo;
+    font-size: $tamano-nav;
+    border-radius: 10px;
+    padding: 5px;
+}
 
-    .enlace-paisaje {
-        background-color: $color-segundo;
-        font-size: $tamano-nav;
-        border-radius: 10px;
-        padding: 5px;
-    }
+.enlace-sobre-mi {
+    background-color: $color-cuarto;
+    font-size: $tamano-nav;
+    border-radius: 10px;
+    padding: 5px;
+}
 
-    .enlace-sobre-mi {
-        background-color: $color-cuarto;
-        font-size: $tamano-nav;
-        border-radius: 10px;
-        padding: 5px;
-    }
+.enlace-animales {
+    background-color: $color-primario;
+    font-size: $tamano-nav;
+    border-radius: 10px;
+    padding: 5px;
+}
 
-    .enlace-animales {
-        background-color: $color-primario;
-        font-size: $tamano-nav;
-        border-radius: 10px;
-        padding: 5px;
-    }
+p {
+    font-size: $tamano-parrafo;
+    text-align: $alineacion-parrafo;
+    padding-right: 20px;
+    margin: 50px auto;
+}
 
-    p {
-        font-size: $tamano-parrafo;
-        text-align: $alineacion-parrafo;
-        padding-right: 20px;
-        margin: 50px auto;
-    }
+// IMAGENES ANIMALES
+.imagenes-animales img {
+    width: 550px;
+    height: auto; /* Altura deseada para las imágenes */
+    margin: 80px;
+    border: solid black;
+    background-color: #f0f0f0;
+    padding: 5px;
+}
 
-    // IMAGENES ANIMALES
-    .imagenes-animales img {
-        width: 550px;
-        height: auto; /* Altura deseada para las imágenes */
-        margin: 80px;
-        border: solid black;
-        background-color: #f0f0f0;
-        padding: 5px;
-    }
+// IMAGENES PAISAJE
+.imagenes-paisaje img {
+    width: 550px;
+    height: auto; /* Altura deseada para las imágenes */
+    margin: 80px;
+    border: solid black;
+    background-color: #f0f0f0;
+    padding: 5px;
+}
 
+// IMAGEN SOBRE MI
+.imagen-sobre-mi img {
+    width: 550px;
+    height: auto; /* Altura deseada para las imágenes */
+    margin: 80px;
+    border: solid black;
+    background-color: #f0f0f0;
+    padding: 5px;
+}
 
-
-    // IMAGENES PAISAJE
-    .imagenes-paisaje img {
-        width: 550px;
-        height: auto; /* Altura deseada para las imágenes */
-        margin: 80px;
-        border: solid black;
-        background-color: #f0f0f0;
-        padding: 5px;
-    }
-
-    // IMAGEN SOBRE MI
-    .imagen-sobre-mi img {
-        width: 550px;
-        height: auto; /* Altura deseada para las imágenes */
-        margin: 80px;
-        border: solid black;
-        background-color: #f0f0f0;
-        padding: 5px;
-    }
-    .imagenes img {
-        object-fit: cover; /* Ajustar para cubrir el contenedor */
-        width: 100%; /* Ancho completo del contenedor */
-        height: auto; /* Altura automática para mantener la relación de aspecto */
-    }
+.imagenes img {
+    object-fit: cover; /* Ajustar para cubrir el contenedor */
+    width: 100%; /* Ancho completo del contenedor */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+}
 
 // GRID PAISAJES
 .imagenes-paisaje {
@@ -202,7 +188,7 @@
     padding: 5px;
 }
 
-//GRID NOCTURNO
+// GRID NOCTURNO
 .imagenes-nocturno {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -213,7 +199,7 @@
 }
 
 .imagen-nocturno-11 { grid-area: 1 / 2 / 2 / 3; }
-.imagen-nocturno-3  { grid-area: 1/ 1 / 2 / 2; }
+.imagen-nocturno-3  { grid-area: 1 / 1 / 2 / 2; }
 .imagen-nocturno-6  { grid-area: 2 / 2 / 3 / 3; }
 .imagen-nocturno-19 { grid-area: 2 / 3 / 3 / 4; }
 .imagen-nocturno-9  { grid-area: 3 / 2 / 4 / 3; }
@@ -228,44 +214,35 @@
     background-color: #f0f0f0;
 }
 
-
-
-
 /* Media Query para pantallas pequeñas (máximo 768px) */
 @media (max-width: 768px) {
     .imagenes-animales {
         text-align: center;
         padding: 5px;
-     }
-    .imagenes-paisaje{
-        text-align: center;
-        padding: 5px;
-        grid-template-columns: 1fr;
-
-    .imagenes-nocturno{
-        text-align: center;
-        padding: 5px;
-        grid-template-columns: 1fr;
-
     }
-
-
-     }
+    .imagenes-paisaje {
+        text-align: center;
+        padding: 5px;
+        grid-template-columns: 1fr;
+    }
+    .imagenes-nocturno {
+        text-align: center;
+        padding: 5px;
+        grid-template-columns: 1fr;
+    }
 }
-/* Media Query para pantallas pequeñas (máximo 480px) */
 
-@media(max-width:480px){
+/* Media Query para pantallas pequeñas (máximo 480px) */
+@media (max-width: 480px) {
     .imagenes-animales {
         text-align: center;
         padding: 5px;
-
-     }
-    .imagenes-paisaje{
+    }
+    .imagenes-paisaje {
         text-align: center;
         padding: 5px;
-
-     }
-     .imagenes-nocturno{
+    }
+    .imagenes-nocturno {
         text-align: center;
         padding: 5px;
     }
