@@ -150,24 +150,32 @@ p {
 }
 
 /* Media Query para pantallas pequeñas (máximo 768px) */
+/* Media Query para pantallas medianas (máximo 768px) */
 @media (max-width: 768px) {
+    .imagenes-nocturno {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+    }
+
+    /* Ajustes generales para centrar las imágenes */
     .imagenes-animales, .imagenes-paisaje, .imagenes-nocturno {
         text-align: center;
         padding: 5px;
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        margin: auto; /* Centra el grid */
     }
 
-    .imagenes-paisaje, .imagenes-nocturno {
-        grid-template-columns: 1fr;
+    /* Ajuste específico para el grid nocturno */
+    .imagen-nocturno-11,
+    .imagen-nocturno-3,
+    .imagen-nocturno-6,
+    .imagen-nocturno-19,
+    .imagen-nocturno-9,
+    .imagen-nocturno-10,
+    .imagen-nocturno-8 {
+        grid-area: auto; /* Reinicia el grid area */
     }
 }
 
-/* Media Query para pantallas muy pequeñas (máximo 480px) */
-@media (max-width: 480px) {
-    .imagenes-animales, .imagenes-paisaje, .imagenes-nocturno {
-        text-align: center;
-        padding: 5px;
-    }
-}
 
 .social-icons a {
     font-size: 24px;
