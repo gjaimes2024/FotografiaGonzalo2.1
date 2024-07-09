@@ -50,21 +50,12 @@ h1 {
 }
 
 //TITULOS DE LAS PAGINAS
-.titulo-animales {
+.titulo-animales, .titulo-nocturno, .titulo-paisajes, .titulo-sobre-mi {
     background-image: linear-gradient(to left, red, green);
 }
 
 .titulo-nocturno {
-    background-image: linear-gradient(to left, red, green);
-    animation:reverse;
-}
-
-.titulo-paisajes {
-    background-image: linear-gradient(to left, red, green);
-}
-
-.titulo-sobre-mi {
-    background-image: linear-gradient(to left, red, green);
+    animation: reverse;
 }
 
 ul {
@@ -80,15 +71,7 @@ li a {
     margin: 20px;
 }
 
-.enlace-index {
-    background-color: rgb(53, 53, 196);
-    font-size: $tamano-nav;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.enlace-nocturno {
-    background-color: $color-terciario;
+.enlace-index, .enlace-nocturno, .enlace-paisaje, .enlace-sobre-mi, .enlace-animales {
     font-size: $tamano-nav;
     border-radius: 10px;
     padding: 5px;
@@ -98,27 +81,6 @@ li a {
     background-color: red;
 }
 
-.enlace-paisaje {
-    background-color: $color-segundo;
-    font-size: $tamano-nav;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.enlace-sobre-mi {
-    background-color: $color-cuarto;
-    font-size: $tamano-nav;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.enlace-animales {
-    background-color: $color-primario;
-    font-size: $tamano-nav;
-    border-radius: 10px;
-    padding: 5px;
-}
-
 p {
     font-size: $tamano-parrafo;
     text-align: $alineacion-parrafo;
@@ -126,28 +88,8 @@ p {
     margin: 50px auto;
 }
 
-// IMAGENES ANIMALES
-.imagenes-animales img {
-    width: 550px;
-    height: auto; /* Altura deseada para las imágenes */
-    margin: 80px;
-    border: solid black;
-    background-color: #f0f0f0;
-    padding: 5px;
-}
-
-// IMAGENES PAISAJE
-.imagenes-paisaje img {
-    width: 550px;
-    height: auto; /* Altura deseada para las imágenes */
-    margin: 80px;
-    border: solid black;
-    background-color: #f0f0f0;
-    padding: 5px;
-}
-
-// IMAGEN SOBRE MI
-.imagen-sobre-mi img {
+// IMAGENES
+.imagenes-animales img, .imagen-sobre-mi img, .imagenes-paisaje img {
     width: 550px;
     height: auto; /* Altura deseada para las imágenes */
     margin: 80px;
@@ -181,14 +123,6 @@ p {
 .imagen-cielo-6 { grid-column: 3 / 4; grid-row: 3 / 4; }
 .imagen-paisaje-6 { grid-column: 2 / 3; grid-row: 4 / 5; }
 
-.imagenes-paisaje img {
-    width: 100%;
-    height: auto;
-    border: solid black;
-    background-color: #f0f0f0;
-    padding: 5px;
-}
-
 // GRID NOCTURNO
 .imagenes-nocturno {
     display: grid;
@@ -217,37 +151,24 @@ p {
 
 /* Media Query para pantallas pequeñas (máximo 768px) */
 @media (max-width: 768px) {
-    .imagenes-animales {
+    .imagenes-animales, .imagenes-paisaje, .imagenes-nocturno {
         text-align: center;
         padding: 5px;
     }
-    .imagenes-paisaje {
-        text-align: center;
-        padding: 5px;
-        grid-template-columns: 1fr;
-    }
-    .imagenes-nocturno {
-        text-align: center;
-        padding: 5px;
+
+    .imagenes-paisaje, .imagenes-nocturno {
         grid-template-columns: 1fr;
     }
 }
 
-/* Media Query para pantallas pequeñas (máximo 480px) */
+/* Media Query para pantallas muy pequeñas (máximo 480px) */
 @media (max-width: 480px) {
-    .imagenes-animales {
-        text-align: center;
-        padding: 5px;
-    }
-    .imagenes-paisaje {
-        text-align: center;
-        padding: 5px;
-    }
-    .imagenes-nocturno {
+    .imagenes-animales, .imagenes-paisaje, .imagenes-nocturno {
         text-align: center;
         padding: 5px;
     }
 }
+
 .social-icons a {
     font-size: 24px;
     margin: 0 10px;
