@@ -14,177 +14,121 @@ h1 {
     font-weight: bolder;
 }
 
-.lista {
-    text-align: center;
+.header {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 10px 10%;
+}
+
+.header .links li {
+    display: inline-block;
+    padding: 0 20px;
+    text-align: left;
+    list-style: none;
+}
+
+// .header .logo {
+//     cursor: pointer;
+//     transition: all 0.3s;
+// }
+
+.logo .imglogo{
+  cursor: pointer;
+}
+
+.header .logo img:hover {
+    transform: scale(1.1);
+}
+
+.header li:hover {
+    transform: scale(1.8);
+    transition: 0.5s;
+    color: violet;
+}
+
+.header .links a {
+    font-size: 1rem;
     color: black;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    margin: 50px;
-    box-sizing: border-box;
-    justify-content: center;
-}
-
-.enlace-animales {
-    background-color: $color-primario;
-    font-family: $fuente-principal;
-    font-size: $tamano-titulo-secundario;
-}
-
-.enlace-nocturna {
-    background-color: $color-segundo;
-    font-family: $fuente-principal;
-    font-size: $tamano-titulo-secundario;
-}
-
-.enlace-paisajes {
-    background-color: $color-terciario;
-    font-family: $fuente-principal;
-    font-size: $tamano-titulo-secundario;
-}
-
-.enlace-sobre-mi {
-    background-color: $color-cuarto;
-    font-family: $fuente-principal;
-    font-size: $tamano-titulo-secundario;
-}
-
-//TITULOS DE LAS PAGINAS
-.titulo-animales, .titulo-nocturno, .titulo-paisajes, .titulo-sobre-mi {
-    background-image: linear-gradient(to left, red, green);
-}
-
-.titulo-nocturno {
-    animation: reverse;
-}
-
-ul {
-    list-style: none;
     text-decoration: none;
+    transition: transform 0.3s;
 }
 
-li a {
-    color: black; /* Hereda el color del padre (li) */
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin: 20px;
+@media (max-width: 500px) {
+    .header {
+        background-color: aqua;
+        height: auto;
+    }
+
+    .header .links li {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .header .logo {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .header .links {
+        padding: 0;
+    }
 }
 
-.enlace-index, .enlace-nocturno, .enlace-paisaje, .enlace-sobre-mi, .enlace-animales {
-    font-size: $tamano-nav;
-    border-radius: 10px;
-    padding: 5px;
+.parrafo-nocturno {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 30px;
 }
 
-.enlace-nocturno:hover {
-    background-color: red;
-}
-
-p {
-    font-size: $tamano-parrafo;
-    text-align: $alineacion-parrafo;
-    padding-right: 20px;
-    margin: 50px auto;
-}
-
-// IMAGENES
-.imagenes-animales img, .imagen-sobre-mi img, .imagenes-paisaje img {
-    width: 550px;
-    height: auto; /* Altura deseada para las imágenes */
-    margin: 80px;
-    border: solid black;
-    background-color: #f0f0f0;
-    padding: 5px;
-}
-
-.imagenes img {
-    object-fit: cover; /* Ajustar para cubrir el contenedor */
-    width: 100%; /* Ancho completo del contenedor */
-    height: auto; /* Altura automática para mantener la relación de aspecto */
-}
-
-// GRID PAISAJES
-.imagenes-paisaje {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-    gap: 10px;
-    width: 100%;
-    margin: auto;
-}
-
-.imagen-paisaje-7 { grid-column: 1 / 2; grid-row: 1 / 2; }
-.imagen-paisaje-8 { grid-column: 2 / 3; grid-row: 1 / 2; }
-.imagen-paisaje-9 { grid-column: 2 / 3; grid-row: 2 / 3; }
-.imagen-paisaje-1 { grid-column: 1 / 2; grid-row: 2 / 3; }
-.imagen-paisaje-4 { grid-column: 3 / 4; grid-row: 2 / 3; }
-.imagen-paisaje-11 { grid-column: 1 / 2; grid-row: 3 / 4; }
-.imagen-cielo-6 { grid-column: 3 / 4; grid-row: 3 / 4; }
-.imagen-paisaje-6 { grid-column: 2 / 3; grid-row: 4 / 5; }
-
-// GRID NOCTURNO
 .imagenes-nocturno {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, auto);
-    gap: 10px;
-    width: 80%;
-    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: black;
 }
 
-.imagen-nocturno-11 { grid-area: 1 / 2 / 2 / 3; }
-.imagen-nocturno-3  { grid-area: 1 / 1 / 2 / 2; }
-.imagen-nocturno-6  { grid-area: 2 / 2 / 3 / 3; }
-.imagen-nocturno-19 { grid-area: 2 / 3 / 3 / 4; }
-.imagen-nocturno-9  { grid-area: 3 / 2 / 4 / 3; }
-.imagen-nocturno-10 { grid-area: 4 / 2 / 5 / 3; }
-.imagen-nocturno-8  { grid-area: 5 / 2 / 6 / 3; }
-
-.imagenes-nocturno img {
-    width: 100%;
+.imagen-nocturno-11,
+.imagen-nocturno-3,
+.imagen-nocturno-6,
+.imagen-nocturno-19,
+.imagen-nocturno-9,
+.imagen-nocturno-10,
+.imagen-nocturno-8 {
+    max-width: 100%;
     height: auto;
-    border: 1px solid black;
-    padding: 5px;
-    background-color: #f0f0f0;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-
-/* Media Query para pantallas medianas (máximo 768px) */
-@media (max-width: 768px) {
-    .imagenes-nocturno {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
-    }
-
-    /* Ajustes generales para centrar las imágenes */
-    .imagenes-animales, .imagenes-paisaje, .imagenes-nocturno {
-        text-align: center;
-        padding: 5px;
-        width: 100%; /* Asegura que ocupe todo el ancho disponible */
-        margin: auto; /* Centra el grid */
-    }
-
-    /* Ajuste específico para el grid nocturno */
-    .imagen-nocturno-11,
-    .imagen-nocturno-3,
-    .imagen-nocturno-6,
-    .imagen-nocturno-19,
-    .imagen-nocturno-9,
-    .imagen-nocturno-10,
-    .imagen-nocturno-8 {
-        grid-area: auto; /* Reinicia el grid area */
-    }
+.imagen-nocturno-11:hover,
+.imagen-nocturno-3:hover,
+.imagen-nocturno-6:hover,
+.imagen-nocturno-19:hover,
+.imagen-nocturno-9:hover,
+.imagen-nocturno-10:hover,
+.imagen-nocturno-8:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+footer {
+    background-color: $color-principal;
+    padding: 10px 0;
+    text-align: center;
+    color: $color-secundario;
+}
 
-.social-icons a {
-    font-size: 35px;
+footer .social-icons a {
+    color: inherit;
     margin: 0 10px;
-    color: #333; /* Color del icono */
-    text-decoration: none; /* Eliminar subrayado */
-    position: center;
+    transition: color 0.3s;
 }
 
-.social-icons a:hover {
-    color: #007bff; /* Color al pasar el cursor por encima */
+footer .social-icons a:hover {
+    color: darken($color-secundario, 50%);
 }
