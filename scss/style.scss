@@ -30,14 +30,11 @@ h1 {
     list-style: none;
 }
 
-// .header .logo {
-//     cursor: pointer;
-//     transition: all 0.3s;
-// }
+ .header .logo {
+     cursor: pointer;
+     transition: all 0.3s;
+ }
 
-.logo .imglogo{
-  cursor: pointer;
-}
 
 .header .logo img:hover {
     transform: scale(1.1);
